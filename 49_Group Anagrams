@@ -1,4 +1,8 @@
 '''
+Given an array of strings strs, group the anagrams together. You can return the answer in any order.
+An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+
+
 collections: This module implements specialized container datatypes 
              providing alternatives to Python’s general purpose built-in containers, dict, list, set, and tuple.
 *dictionary type(dict): Unlike sequences, which are indexed by a range of numbers, 
