@@ -1,0 +1,27 @@
+'''
+collections: This module implements specialized container datatypes 
+             providing alternatives to Python’s general purpose built-in containers, dict, list, set, and tuple.
+*dictionary type(dict): Unlike sequences, which are indexed by a range of numbers, 
+                        dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be keys. 
+collections.defaultdict(): dict subclass that calls a factory function to supply missing values
+                           값이 지정되지 않은 key 값에 대해 default값이 주어짐.
+str.join(): Return a string which is the concatenation of the strings in iterable.
+            The separator between elements is the string providing this method.
+
+append(): Append a new item with value x to the end of the array.
+
+sorted(): Return a new sorted list from the items in iterable.
+
+key값으로 sort된 단어, append로 해당 단어를 추가한다.
+defaultdict(<class 'list'>, {'aet': ['eat', 'tea', 'ate'], 'ant': ['tan', 'nat'], 'abt': ['bat']})
+'''
+
+
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        anagrams = collections.defaultdict(list)
+        
+        for word in strs:
+            anagrams[''.join(sorted(word))].append(word)
+        return anagrams.values()
+    
